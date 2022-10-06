@@ -1,5 +1,7 @@
-a = input('Файл в фаста формате 1: ')
-b = input('файл в фаста формате 2: ')
+print("Please install the BioPyton package first.")
+a = input('Specify the path to the fasta file 1: ')
+b = input('Specify the path to the fasta file 2: ')
+j = int(input('Write the number of proposed amino acid sequences: '))
 from Bio.SeqIO import parse
 file = open(a)
 records = parse(file, 'fasta')
@@ -15,7 +17,9 @@ a = record.seq
 b = human.seq
 c = len(human.seq)
 for i in range(c):
-    if b[i:i+5] in a:
-        print(b[i:i+5])
+    if b[i:i+j] in a:
+        if len(b[i:i + j]) < j:
+            continue
+        print(b[i:i+j])
 
-print('Результаты готов!')
+print('Results ready!')
