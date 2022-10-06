@@ -1,4 +1,4 @@
-print("Please install the BioPyton package first.")
+print("Please install the BioPython package first.")
 a = input('Specify the path to the fasta file 1: ')
 b = input('Specify the path to the fasta file 2: ')
 j = int(input('Write the number of proposed amino acid sequences: '))
